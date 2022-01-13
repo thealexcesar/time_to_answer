@@ -10,8 +10,8 @@
 
   <body>
     <%= alert %> <br> <%= notice %> <br>
-    <%= "Welcome, #{(current_user.name).capitalize}!" if user_signed_in? %> <br><br><br>
+    <%= "Welcome, #{(current_user.name).capitalize}!" if user_signed_in? %> <%= fa_icon 'code', class: "text-danger" %> <br><br><br>
     <%= yield %><br><br>
-    <%= user_signed_in? ? (link_to 'Log out', destroy_user_session_path, method: :delete) : (link_to "Login", new_user_session_path) %>
+    <%= user_signed_in? ? (link_to 'Log out', destroy_user_session_path, method: :delete) : (link_to "Login", user_session_path) %>
   </body>
 </html>
