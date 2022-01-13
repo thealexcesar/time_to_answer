@@ -1,4 +1,9 @@
 pt-BR:
+  welcome: "Bem vindo"
+  login: "Entrar"
+  exit: "Sair"
+  admin: "Administrador"
+  user: "Usuário comum"
   activerecord:
     errors:
       messages:
@@ -6,6 +11,7 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+
   date:
     abbr_day_names:
     - dom
@@ -219,4 +225,4 @@ pt-BR:
       default: "%a, %d de %B de %Y, %H:%M:%S %z"
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
-    pm: ''  
+    pm: ''

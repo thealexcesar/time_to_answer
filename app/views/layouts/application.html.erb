@@ -9,9 +9,14 @@
   </head>
 
   <body>
-    <%= alert %> <br> <%= notice %> <br>
-    <%= "Welcome, #{(current_user.name).capitalize}!" if user_signed_in? %> <%= fa_icon 'code', class: "text-danger" %> <br><br><br>
-    <%= yield %><br><br>
-    <%= user_signed_in? ? (link_to 'Log out', destroy_user_session_path, method: :delete) : (link_to "Login", user_session_path) %>
+    <div class="container col-10">
+      <%= alert %> <br> <%= notice %> <br>
+
+      <%= "#{(t'welcome')}, #{(current_user.name).capitalize}!" if user_signed_in? %> <%= fa_icon 'code', class: "text-danger" %> <br><br><br>
+
+      <%= yield %><br><br>
+
+      <%= user_signed_in? ? (link_to (t'exit'), destroy_user_session_path, method: :delete) : (link_to "Login", user_session_path) %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Customer
+    attributes:
+      user:
+        login: "Handle"
+        name: "nome"
+        created_at: "Data criação"
+        type: "tipo"
