@@ -11,11 +11,11 @@
   <body>
     <div class="container col-10">
       <%= alert %> <br> <%= notice %> <br>
-      <%= "#{(t'welcome')}, #{(current_user.name).capitalize}!" %>
+      <%= "#{(t'general.welcome')}, #{current_user.name if user_signed_in?}!" %>
 
       <%= yield %><br><br>
 
-      <%= link_to (t'exit'), destroy_user_session_path, method: :delete %>
+      <%= link_to (t'general.exit'), destroy_user_session_path, method: :delete %>
     </div>
   </body>
 </html>
